@@ -6,4 +6,8 @@
 ## ref
 
 - type & doc : https://kubernetes-client.github.io/javascript/
-- 
+- official git : https://github.com/kubernetes-client/javascript
+
+## curl을 이용한 모니터링
+
+https://learnk8s.io/real-time-dashboard
