@@ -1,11 +1,13 @@
-const k8s = require("@kubernetes/client-node");
-const kc = new k8s.KubeConfig();
-kc.loadFromDefault();
+// const k8s = require("@kubernetes/client-node");
+// const kc = new k8s.KubeConfig();
+// kc.loadFromDefault();
 // const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
-const watch = new k8s.Watch(kc);
+// const watch = new k8s.Watch(kc);
+
+const { K8SAPI } = require("../api");
 
 exports.do = async () => {
-  watch
+  K8SAPI.watcher
     .watch(
       "/api/v1/events",
       {

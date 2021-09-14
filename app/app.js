@@ -4,8 +4,8 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 // const indexRouter = require('./routes/home');
-const { k8s } = require("./routes");
-const { k8smon } = require("./services");
+const { info, k8sNode } = require("./routes");
+const { k8smon } = require("./controllers");
 
 const app = express();
 
@@ -16,7 +16,8 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/home', indexRouter);
-app.use("/api/", k8s);
+app.use("/api/", info);
+app.use("/api/node", k8sNode);
 
 const main = async () => {
   await k8smon.do();
