@@ -1,0 +1,4 @@
+application:
+  namespace: app
+service:
+  port: 3000

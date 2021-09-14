@@ -1,0 +1,44 @@
+{
+  "name": "k8s-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_PATH=./app  DEBUG=* NODE_ENV=dev nodemon ./app/server.js",
+    "start": "NODE_PATH=./app NODE_ENV=prod node ./app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnogada/k8s-watch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnogada/k8s-watch/issues"
+  },
+  "homepage": "https://github.com/iamnogada/k8s-watch#readme",
+  "_moduleAlias": {
+    "@app": "./app"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "^0.15.1",
+    "config": "^3.3.6",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "require-directory": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "prettier": "^2.4.0"
+  }
+}
